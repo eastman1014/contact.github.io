@@ -12,7 +12,6 @@
   <link rel="stlyesheet" href="style.css">
 </head>
 <style>
-/* CSS Variables */
 :root {
   --yellow:#EFD346;
   --primary: #ddd;
@@ -37,8 +36,6 @@ body {
   line-height: 1.4;
   margin:20px 30px;
 }
-
-
 .btn1 {
   margin-bottom: 40;
     background: var(--yellow);
@@ -147,7 +144,6 @@ border: solid 1px black;
   background-color: var(--Blue);
   color:var(--light);
 }
-/* Top Container */
 .top-container {
   display: grid;
   grid-gap: 20px;
@@ -160,6 +156,7 @@ border: solid 1px black;
 
 /* Showcase */
 .showcase {  
+  margin-top: 20px;
   grid-area: showcase;
   margin-right: px;
   min-width: 650px;
@@ -214,6 +211,7 @@ border: solid 1px black;
 }
 
 .top-box-a {
+  margin-top: 20px;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1qeRARHytUlyancFgl99bsjKHX1sfR4CTMdKxxMw7lrJ8Knwijg");
   text-decoration: underline;
 
@@ -231,61 +229,78 @@ border: solid 1px black;
   background-position: center
   color:var(--Black);
 }
-.boxes {
+.bottom-container{
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  grid-template-areas: 
+  'h'
+  's';
 }
-.boxes h3 {
-  text-decoration: underline;
-  font-size: 2rem;
-
-
+.header1 {
+  margin-bottom: 100px;
+  grid-area: h;
+  margin-top: -100px;
+  height: 120px;
+  width: 300px
+  background-color:var(--yellow);
 }
+.header1 p{
+  font-family: italic;
+  text-align: center;
+  font-size: 100px;
+}
+.slider{
+  grid-area: s;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+      display: grid;
 
-.box {
-  background: 
+    background: 
         linear-gradient(
         rgba(0, 0, 0, .4),
         rgba(0, 0, 0, .4)
         ),
         url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxbsoqpcTX8C7q5z-TZfHftTSyhFDNq4z509X8zQfKCcJ89vKuxA");
-  min-height:250px;
-  background-size:;
-  color:var(--light);
-  text-align: center;
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow);
+  overflow: auto;
+  height: 380px;
 }
-.box img {
-  border: solid 1px black;
+.slider p{
+  position: relative;
+  top:-180px;
+  font-size: 27px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  margin-top: 30px;
+
+  
+color: white;
+
 }
-.box p { font-family: cursive;
+.slider img{
+  position: relative;
+  top:-170px;
+  right:-40px;
+}
+.slider h1 {
+  font-family: cursive;
+  position: relative;
+   left:250px;
+   font-size: 55px;
+  
   color: white;
-  text-shadow: -1px 1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-top:none;
 }
-.box h3 {
-    text-shadow: -1px 1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;
+.slider figure div{
+  height: 400px;
+  border-left: solid 5px white; 
+  width: 16%;
+  float:left;
 
 }
-.box1{
-    min-height: 250px;
-    background: var(--Blue);
-  text-align: center;
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow);
-
+.slider figure{
+  position: relative;
+  width: 610%;
 }
-
 footer {
   margin-top: 1rem;
   background: var(--dark);
@@ -293,11 +308,8 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-  body {
-    background-size: contain;
-    background-repeat: repeat-y repeat-x; }
-/* Media Queries */
-@media (max-width: 950px) {
+
+@media (max-width: 1168px) {
   .top-container {
     grid-template-areas:
       'showcase'
@@ -306,10 +318,40 @@ footer {
       margin-right: 45px;
       margin-left: 45px;
         }
-      body {
+    .left-button {
+      height: 50px;
+      width: 50px;
+
+    }
+          body {
         background: #3463af;
       }
-     button {
+    .header1{margin-bottom: 180px;
+    width: 400px;
+    position: relative; 
+    bottom: -40px;
+    left:70px;
+      
+    }
+    .header1 p{
+      color: white;
+      width: 700px;
+    font-size: 60px;
+    left:70px;
+    }
+    .slider{
+      margin-left:10px;
+      position: relative;
+      width: 800px;
+      top:-130px;
+    }
+    .slider h1{
+      left:300px;
+    }
+    .slider p{
+      margin-bottom:-100px; 
+    }
+    button {
       align-items: center;
       font-size: 26px;
       height: 50px;
@@ -327,11 +369,11 @@ footer {
   .box{
     margin-left:45px;
   }
-   .main-nav{
-      margin-left: -45px;
+    .main-nav{
+
     padding-bottom: 50px;
     padding-left: 50px;
-    margin-right:-7px;
+    margin-right:-590px;
     padding-top: none;
   }
   .top-box-a{
@@ -353,8 +395,8 @@ footer {
     font-size: 2rem;
  }
 footer {
-  margin-right: 45px;
-  margin-left: 45px;
+  margin-top: -100px;
+width: 790px;
 }
 
   @media (max-width: 500px) {
@@ -367,14 +409,8 @@ footer {
  .showcase {
   width: 350px;
  }
-
- }
-
 </style>
 <body>
-
-</div>
-<div class="wrapper">
     <!-- Navigation -->
     <nav class="main-nav">
       <ul>
@@ -463,35 +499,50 @@ footer {
          }
         </script>
     </section>
-      <section class="boxes">
-     
-      <div class="box">
-        <h3 style="font-family: cambria;">Deluxe Exterior Service Procedure</h3>
-        <p style="font-size: 27px; font-family: cursive;border-bottom:solid 1px white;">Step 1 Pre-Wash<p>
-          <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE" style="height: 100px; width: 100px;">
-          <p style="font-family: palatino linotype;">
-          In the Pre-wash stage, we thoroughly rinse all dirt and grime that sticks to tires, rims, trim, bumpers, and windows. We focus on these areas with our pressure washer to minimize dirt, stains, sand, insects, etc.<p>
-
-<p style="font-family:cursive; font-size: 27px;border-bottom: solid 1px white;">Step 2 Foam Wash<p><img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE" style="height: 100px; width: 100px;"><p style="font-family: palatino linotype;">
-In this step we equip our foam/soap cannon attachment to a pressure washer, and this covers the vehicle in a super cleaning formula that removes all stains or dirt. We then hand wash the exterior of the car to ensure a guaranteed shine. After we thoroughly sprayed and hand-washed the vehicle, we then immediately rinse and dry every panel of the car to prevent water streaks.<p>
-
-<p style="font-size: 27px; border-bottom: solid 1px white; font-family:cursive;">Step 3 Tire and Rim Treatment<p><img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE" style="height: 100px; width: 100px;"><p style="font-family: palatino linotype;">
-At this time, we spray the tires and rims with a special cleansing shampoo. The special cleansing shampoo allows us to deeply scrub the tire and rims to remove all further stains. This fully restores the color of your tires and the shine your rims deserve!<p>
-
-<p style="font-size: 27px; border-bottom: solid 1px white; font-family: cursive;">Step 4 Trim Restoration<p><img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE" style="height: 100px; width: 100px;"><p style="font-family: palatino linotype;">
-In this Florida heat, your vehicle's trim is becoming more discolored due to an excess of sunlight exposure.We add a protectant layer of a thin plastic coating that we spray on each exterior trim panel that restores color.
-<p style="font-size: 27px; border-bottom:solid 1px white; font-family:cursive;">Step 5 Headlight Restoration<p><p style="font-family: palatino linotype;"> 
-Over time your headlights will sustain fog and yellow tinting which is primarily because of the sun, rain, pollen, etc. We have a full headlight restoration kit that clears and prevents any yellow tinting on the headlight surface.<p>
-<p style="font-size: 27px; font-family: cursive; border-bottom: solid 1px white;">Step 6 Polish and Wax<p><img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE" style="height: 100px; width: 100px;"><p style="font-family: palatino linotype;">  
-And finally, we have polish buffing and wax buffing by hand to ensure high-quality definition and shine on your vehicle. One of the best aspects about our polish and wax buffing service is that it reduces any scratches or scruffs and provides a protectant layer to prevent any paint damage or deterioration due to sun, rain, insects, etc. (it will not protect your vehicle from rocks or other vehicles). 
- <p>
-      </div>
-    </section>  
-
-<body/>
- <footer>
-   <p>SlickFinish &copy; 2018</p>
- </footer>
-
-</html>
-  <!-- Wrapper Ends -->
+   <section class="bottom-container">
+    <div class="header1">
+      <p>Deluxe Exterior Procedure</p>
+     </div> 
+    <div class="slider">
+      <figure>
+          <div class="slide">
+          <h1>Step 1 Pre-Wash</h1>
+          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
+          <p>In the Pre-wash stage, we thoroughly rinse all dirt and grime that sticks to tires, rims, trim, bumpers, and windows. We focus on these areas with our pressure 
+          washer to minimize dirt, stains, sand, insects, etc.</p>
+          </div>
+            <div class="slide">
+          <h1>Step 2 Foam Wash</h1>
+          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
+          <p>In this step we equip our foam/soap cannon attachment to a pressure washer, and this covers the vehicle in a super cleaning formula that removes all stains or dirt. We then hand wash the exterior of the car to ensure a guaranteed shine. After we thoroughly sprayed and hand-washed the vehicle, we then immediately rinse and dry every panel of the car to prevent water streaks.</p>
+          </div>
+          <div class="slide">
+          <h1>Step 3 Tire and Rim Treatment</h1>
+          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
+          <p>At this time, we spray the tires and rims with a special cleansing shampoo. The special cleansing shampoo allows us to deeply scrub the tire and rims to remove all further stains. This fully restores the color of your tires and the shine your rims deserve!</p>
+          </div> 
+          <div class="slide">
+          <h1>Step 4 Trim Restoration</h1>
+          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
+          <p>In this Florida heat, your vehicle's trim is becoming more discolored due to an excess of sunlight exposure.
+          We add a protectant layer of a thin plastic coating that we 
+         spray on each exterior trim panel that restores color.</p>
+          </div>
+          <div class="slide">
+          <h1>Step 5 Headlight Restoration</h1>
+          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
+          <p> Over time your headlights will sustain fog and yellow tinting which is primarily because of the sun, rain, pollen, etc. We have a full headlight restoration kit that clears 
+          and prevents any yellow tinting on the headlight surface.</p>
+          </div>
+          <div class="slide">
+          <h1>Step 6 Polish and Wax</h1>
+          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
+          <p>And finally, we have polish buffing and wax buffing by hand to ensure high-quality definition and shine on your vehicle. One of the best aspects about our polish and wax buffing service is that it reduces any scratches or scruffs and provides a protectant layer to prevent any paint damage or deterioration due to sun, rain, insects, etc. (it will not protect your vehicle from rocks or other vehicles)</p>
+          </div>
+     </figure>
+  </div>
+</section>
+    <footer>
+      <p>SlickFinish &copy; 2018</p>
+    </footer>
+ </body>
