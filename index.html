@@ -100,10 +100,10 @@ grid-template-areas: 'navbar-brand img navbar-brand p'
 background-size: cover;
 background-position: center;
 margin-top: -50px;
-margin-right: -50px;
+margin-right: -80px;
 margin-left: -50px;
 padding-top: 50px;
-padding-right: -80px;
+padding-right: -500px;
 padding-bottom: 100px;
 border: solid 1px black;
 }
@@ -172,6 +172,11 @@ border: solid 1px black;
   align-items: start;
   just: 40;
   box-shadow: var(--white);
+}
+.showcase a{
+  position: relative;
+  top: 200px;
+  left: 30px;
 }
 
 
@@ -310,7 +315,7 @@ footer {
   padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1168px) {
   .top-container {
     grid-template-areas:
       'showcase'
@@ -319,12 +324,13 @@ footer {
       margin-right: 45px;
       margin-left: 45px;
         }
-@media (max-width: 768px){
+@media (max-width: 900){
   .bottom-container{
     grid-template-areas: 
     'h'
     's';
   }
+}
     .left-button {
       height: 50px;
       width: 50px;
@@ -380,6 +386,10 @@ footer {
   .showcase {
     min-height: 300px;
   }
+  .showcase a{
+    top:10px;
+    left: -5px;
+  }
   .box{
     margin-left:45px;
   }
@@ -387,7 +397,8 @@ footer {
 
     padding-bottom: 50px;
     padding-left: 50px;
-    margin-right:-50px;
+    margin-right:-590px;
+    padding-right:50px;
     padding-top: none;
   }
   .top-box-a{
@@ -409,8 +420,8 @@ footer {
     font-size: 2rem;
  }
 footer {
-  margin-top: -100px;
-width: 790px;
+  margin-top: px;
+width: 830px;
 }
 
   @media (max-width: 500px) {
@@ -423,24 +434,8 @@ width: 790px;
  .showcase {
   width: 350px;
  }
- @media (min-width: 3000px){
-  .top-container{
-    grid-template-areas: 
-    'showcase'
-    'top-box-a'
-    'top-box-b';
-  }
-  @media (min-width: 3000px){
-  .bottom-container{
-    grid-template-areas: 
-    'h'
-    's';
-  }
-
- }
 </style>
 <body>
-<div class="wrapper">
     <!-- Navigation -->
     <nav class="main-nav">
       <ul>
@@ -460,7 +455,7 @@ width: 790px;
     </nav>
       <section class="top-container">
       <header class="showcase">
-        <h1></h1>
+        <a href="" class="btn">Deluxe Procedure Here</a>
         <p></p>
       </header>
       <div class="top-box top-box-a">
@@ -528,49 +523,6 @@ width: 790px;
           x[slideIndex[no]-1].style.display = "block";  
          }
         </script>
-    </section>
-   <section class="bottom-container">
-    <div class="header1">
-      <p>Deluxe Exterior Procedure</p>
-     </div> 
-    <div class="slider">
-      <figure>
-          <div class="slide">
-          <h1>Step 1 Pre-Wash Procedure</h1>
-          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
-          <p>In the Pre-wash stage, we thoroughly rinse all dirt and grime that sticks to tires, rims, trim, bumpers, and windows. We focus on these areas with our pressure 
-          washer to minimize dirt, stains, sand, insects, etc.</p>
-          </div>
-            <div class="slide">
-          <h1>Step 2 Foam Wash Procedure</h1>
-          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
-          <p>In this step we equip our foam/soap cannon attachment to a pressure washer, and this covers the vehicle in a super cleaning formula that removes all stains or dirt. We then hand wash the exterior of the car to ensure a guaranteed shine. After we thoroughly sprayed and hand-washed the vehicle, we then immediately rinse and dry every panel of the car to prevent water streaks.</p>
-          </div>
-          <div class="slide">
-          <h1>Step 3 Tire and Rim Treatment</h1>
-          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
-          <p>At this time, we spray the tires and rims with a special cleansing shampoo. The special cleansing shampoo allows us to deeply scrub the tire and rims to remove all further stains. This fully restores the color of your tires and the shine your rims deserve!</p>
-          </div> 
-          <div class="slide">
-          <h1>Step 4 Trim Restoration</h1>
-          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
-          <p>In this Florida heat, your vehicle's trim is becoming more discolored due to an excess of sunlight exposure.
-          We add a protectant layer of a thin plastic coating that we 
-         spray on each exterior trim panel that restores color.</p>
-          </div>
-          <div class="slide">
-          <h1>Step 5 Headlight Restoration</h1>
-          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
-          <p> Over time your headlights will sustain fog and yellow tinting which is primarily because of the sun, rain, pollen, etc. We have a full headlight restoration kit that clears 
-          and prevents any yellow tinting on the headlight surface.</p>
-          </div>
-          <div class="slide">
-          <h1>Step 6 Polish and Wax</h1>
-          <img src= "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-0/c0.22.200.200/p200x200/36665804_648979598781645_6813193311264702464_n.jpg?_nc_cat=0&oh=b923e23c0780fa0e144d3e083f83bea1&oe=5BAB2CDE">
-          <p>And finally, we have polish buffing and wax buffing by hand to ensure high-quality definition and shine on your vehicle. One of the best aspects about our polish and wax buffing service is that it reduces any scratches or scruffs and provides a protectant layer to prevent any paint damage or deterioration due to sun, rain, insects, etc. (it will not protect your vehicle from rocks or other vehicles)</p>
-          </div>
-     </figure>
-  </div>
 </section>
     <footer>
       <p>SlickFinish &copy; 2018</p>
