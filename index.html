@@ -97,11 +97,12 @@ grid-template-areas: 'navbar-brand img navbar-brand p'
   grid-gap: 20px;
 }
 .main-nav{
+  
   background-image: url("https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/36843941_652132295133042_4673685116885663744_n.jpg?_nc_cat=0&oh=b77aaab1e29cb9430d5c2bf9dd2c44e2&oe=5BDF6F7F");
 background-size: cover;
 background-position: center;
 margin-top: -50px;
-margin-right: -80px;
+margin-right: -100px;
 margin-left: -50px;
 padding-top: 50px;
 padding-right: -50px;
@@ -150,19 +151,38 @@ border: solid 1px black;
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
-    'showcase showcase top-box-a'
-    '. . top-box-b';
+    'showcasea showcase '
+    'top-box-a top-box-b';
   
 
+}
+.showcasea {  
+  position: relative;
+  margin-top: 20px;
+  grid-area: showcasea;
+  right:
+  min-width: 550px;
+  min-height: 350px;
+  background: url("https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/36002711_638093443203594_539201502988730368_n.jpg?_nc_cat=0&oh=7069ab3ee9b41c71aa8fa7a13675a056&oe=5BB74908");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  just: 40;
+  box-shadow: var(--white);
 }
 
 /* Showcase */
 .showcase {  
+  position: relative;
   margin-top: 20px;
   grid-area: showcase;
-  margin-right: px;
-  min-width: 650px;
-  min-height: 230px;
+  right:-30px;
+  min-width: 300px;
+  min-height: 350px;
   background: url("https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/36280133_639765763036362_3499202425481330688_n.jpg?_nc_cat=0&oh=101f5e2a81494db8d0af8c9cad52f66c&oe=5BA54AA0");
   background-size: 100% 100%;
   background-position: center;
@@ -184,8 +204,8 @@ border: solid 1px black;
   font-family: cambria;
   border-radius: 8px;
   position: relative;
-  top: 106px;
-  left: 15px;
+  top: 56px;
+  left: -15px;
 }
 
 
@@ -199,12 +219,20 @@ border: solid 1px black;
   padding: 1rem;
 }
 .left-button {
+  position: relative;
+  top: -285px;
+  left:-73px;
+  font-size: 100px;
   background-color: var(--Black);
   color: var(--light);
   margin-right: 10px;
 
 }
 .right-button {
+  position: relative;
+  font-size: 100px;
+  left:290px;
+  top:-285px;
     background-color: var(--Black);
   color: var(--light);
   margin-left: -10px;
@@ -226,7 +254,7 @@ border: solid 1px black;
 }
 
 .top-box-a {
-  margin-top: 20px;
+  position: relative;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1qeRARHytUlyancFgl99bsjKHX1sfR4CTMdKxxMw7lrJ8Knwijg");
   text-decoration: underline;
 
@@ -239,6 +267,8 @@ border: solid 1px black;
 .top-box-b {
   background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/shine-background-6.jpg");
   text-decoration: underline;
+  position: relative;
+  right: -30px;
   grid-area: top-box-b;
   background-size: 100% 100%;
   background-position: center
@@ -317,6 +347,7 @@ color: white;
   width: 610%;
 }
 footer {
+  margin-right:-55px; 
   margin-top: 1rem;
   background: var(--dark);
   color: var(--light);
@@ -327,6 +358,7 @@ footer {
 @media (max-width: 768px) {
   .top-container {
     grid-template-areas:
+      'showcasea'
       'showcase'
       'top-box-a'
       'top-box-b';
@@ -341,12 +373,22 @@ footer {
   }
 }
     .left-button {
+      font-size: 27px;
+      position:relative;
+      top: -230px;
+      left:-70px;
       height: 50px;
       width: 50px;
 
     }
-          body {
-        background: #3463af;
+  body {
+    background: #3463af;
+      }
+      .right-button{
+        position: relative;
+        left:320px;
+        top: -230px;
+        font-size: 27px;
       }
     .header1{margin-bottom: 180px;
     width: 400px;
@@ -375,38 +417,42 @@ footer {
       font-size: 40px;
       left:270px;
     }
-    .slider p{
+   .slider p{
       top:-210px;
 
       margin-bottom:-100px; 
     }
-    button {
+  button {
       align-items: center;
       font-size: 26px;
       height: 50px;
       width: 50px;
     }
   
-    .main-nav ul {
+  .main-nav ul {
     grid-template-columns: 1fr;
     margin-right: 60px;
 
   }
   .showcase {
+    right: 3px;
     min-height: 300px;
   }
   .showcase a{
-    top:45px;
-    left: -5px;
+    font-size: 15px;
+    padding:.2rem 1rem;
+    width: 160px;
+    top:64px;
+    left: -10px;
   }
   .box{
     margin-left:45px;
   }
-    .main-nav{
+  .main-nav{
 
     padding-bottom: 50px;
     padding-left: 50px;
-    width: 850px;
+    width: 550px;
     padding-right:50px;
     padding-top: none;
   }
@@ -415,6 +461,7 @@ footer {
     font-size: 2rem;
   }
   .top-box-b{
+    right:3px;
     font-size: 2rem;
     margin-bottom: 5px;
 
@@ -430,12 +477,13 @@ footer {
  }
 footer {
   margin-top: px;
-width: 830px;
+width: 530px;
 }
 
   @media (max-width: 500px) {
   .top-container {
     grid-template-areas:
+      'showcasea'
       'showcase'
       'top-box-a'
       'top-box-b';
@@ -445,11 +493,6 @@ width: 830px;
  }
  .main-nav{
 
- }
- @media (min-width: 3500px) {
- 	.top-container {
- 		
- 	}
  }
 </style>
 <body>
@@ -471,6 +514,7 @@ width: 830px;
       </ul>
     </nav>
       <section class="top-container">
+      <div class="showcasea"></div>
       <header class="showcase">
         <a href="https://eastman1014.github.io/eastman10144.github.io/" class="btn">Deluxe Procedure Here</a>
         <p></p>
