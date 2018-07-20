@@ -98,16 +98,16 @@ grid-template-areas: 'navbar-brand img navbar-brand p'
 }
 .main-nav{
   
-  background-image: url("https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/36843941_652132295133042_4673685116885663744_n.jpg?_nc_cat=0&oh=b77aaab1e29cb9430d5c2bf9dd2c44e2&oe=5BDF6F7F");
-background-size: cover;
-background-position: center;
-margin-top: -50px;
-margin-right: -100px;
-margin-left: -50px;
-padding-top: 50px;
-padding-right: -50px;
-padding-bottom: 100px;
-border: solid 1px black;
+    min-width: 1100px;
+    background-image: url(https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/36843941_652132295133042_4673…6885663744_n.jpg?_nc_cat=0&oh=b77aaab…&oe=5BDF6F7F);
+    background-size: cover;
+    background-position: center;
+    margin-top: -50px;
+    margin-right: -100px;
+    margin-left: -50px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border: solid 1px black;
 }
 .main-nav:nt(odd) {
   background-color:nth-child var(--Blue);
@@ -118,7 +118,7 @@ border: solid 1px black;
 }
 .main-nav ul {
   display: grid;
-  margin-left: 50px;
+  margin-left: 40px;
   margin-right: 50px;
   grid-gap: 20px;
   padding: 0;
@@ -254,6 +254,7 @@ border: solid 1px black;
 }
 
 .top-box-a {
+	min-width: 463px;
   position: relative;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1qeRARHytUlyancFgl99bsjKHX1sfR4CTMdKxxMw7lrJ8Knwijg");
   text-decoration: underline;
@@ -265,6 +266,7 @@ border: solid 1px black;
 }
 
 .top-box-b {
+	min-width: 463px;
   background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/shine-background-6.jpg");
   text-decoration: underline;
   position: relative;
@@ -347,6 +349,7 @@ color: white;
   width: 610%;
 }
 footer {
+	min-width: 1013px
   margin-right:-55px; 
   margin-top: 1rem;
   background: var(--dark);
@@ -431,11 +434,11 @@ footer {
   
   .main-nav ul {
     grid-template-columns: 1fr;
-    margin-right: 60px;
+    margin-right: 0px;
 
   }
   .showcase {
-    right: 3px;
+    right: -0px;
     min-height: 300px;
   }
   .showcase a{
@@ -452,10 +455,9 @@ footer {
 
     padding-bottom: 50px;
     padding-left: 50px;
-    width: 550px;
-    padding-right:50px;
-    padding-top: none;
-  }
+    min-width: 520px;
+    padding-right: 90px;
+}
   .top-box-a{
 
     font-size: 2rem;
@@ -477,7 +479,7 @@ footer {
  }
 footer {
   margin-top: px;
-width: 530px;
+min-width: 530px;
 }
 
   @media (max-width: 500px) {
